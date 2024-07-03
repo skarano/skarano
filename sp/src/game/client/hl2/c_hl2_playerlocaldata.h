@@ -49,7 +49,6 @@ public:
 	// Ladder related data
 	EHANDLE			m_hLadder;
 	LadderMove_t	m_LadderMove;
-
 };
 
 
