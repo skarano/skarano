@@ -51,7 +51,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
+<<<<<<< HEAD
     - uses: actions/checkout@v3
+=======
+    - uses: actions/checkout@v4
+>>>>>>> origin/master
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.1
@@ -135,9 +139,13 @@ jobs:
         msbuild -m -p:Configuration=${{inputs.configuration}} materialsystem\stdshaders\game_shader_dx9_episodic.vcxproj
         msbuild -m -p:Configuration=${{inputs.configuration}} materialsystem\stdshaders\game_shader_dx9_hl2.vcxproj
         msbuild -m -p:Configuration=${{inputs.configuration}} game\client\client_episodic.vcxproj
+<<<<<<< HEAD
         msbuild -m -p:Configuration=${{inputs.configuration}} game\client\client_hl2.vcxproj
         msbuild -m -p:Configuration=${{inputs.configuration}} game\server\server_episodic.vcxproj
         msbuild -m -p:Configuration=${{inputs.configuration}} game\server\server_hl2.vcxproj
+=======
+        msbuild -m -p:Configuration=${{inputs.configuration}} game\server\server_episodic.vcxproj
+>>>>>>> origin/master
 
       # --------------------------------------------------------------------
 
@@ -194,7 +202,13 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Install GCC/G++ multilib
+<<<<<<< HEAD
       run: sudo apt-get install gcc-multilib g++-multilib
+=======
+      run: |
+        sudo apt-get update
+        sudo apt-get install gcc-multilib g++-multilib
+>>>>>>> origin/master
 
     - name: Pick game
       if: inputs.project-group == 'game' || inputs.project-group == 'shaders'

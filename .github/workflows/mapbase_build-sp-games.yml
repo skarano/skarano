@@ -13,6 +13,10 @@ on:
     branches:
       - develop
     paths:
+<<<<<<< HEAD
+=======
+      - '.github/workflows/mapbase_build-base.yml'
+>>>>>>> origin/master
       - '.github/workflows/mapbase_build-sp-rel-games.yml'
       - 'sp/src/vpc_scripts/**'
       - 'sp/src/game/**'

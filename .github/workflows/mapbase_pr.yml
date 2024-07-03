@@ -6,11 +6,19 @@
 # https://github.com/actions/labeler
 
 name: Pull Request Automation
+<<<<<<< HEAD
 on: [pull_request]
+=======
+on: [pull_request] # pull_request_target
+>>>>>>> origin/master
 
 jobs:
   label:
 
+<<<<<<< HEAD
+=======
+    if: github.repository_owner == 'mapbase-source' # ${{ vars.MAPBASE_LABELS == 'true' }}
+>>>>>>> origin/master
     runs-on: ubuntu-latest
     permissions:
       contents: read
