@@ -23,7 +23,7 @@
 
 #define STUB_WEAPON_CLASS( entityName, className, baseClassName )	\
 	class C_##className : public baseClassName					\
-	{																\
+		{																\
 		DECLARE_CLASS( C_##className, baseClassName );							\
 	public:															\
 		DECLARE_PREDICTABLE();										\
@@ -31,7 +31,7 @@
 		C_##className() {};											\
 	private:														\
 		C_##className( const C_##className & );						\
-	};																\
+		};																\
 	STUB_WEAPON_CLASS_IMPLEMENT( entityName, C_##className );		\
 	IMPLEMENT_CLIENTCLASS_DT( C_##className, DT_##className, C##className )	\
 	END_RECV_TABLE()
